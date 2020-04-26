@@ -160,8 +160,8 @@ Response from the above API is (r) which will be in json format where keys will 
 2) http://www.storybench.org/how-to-scrape-reddit-with-python/
 
 ##### For deployment on heroku
-1)https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0
+1) https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0
 
 ##### To enable cors in flask
-2)https://stackoverflow.com/questions/25594893/how-to-enable-cors-in-flask
+1) https://stackoverflow.com/questions/25594893/how-to-enable-cors-in-flask
 
