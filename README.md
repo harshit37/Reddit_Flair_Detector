@@ -1,12 +1,13 @@
 # Reddit_Flair_Detector
-Deployed a machine learning model on Heroku which can predict the flair of a reddit post from subreddit r/India
+Deployed a machine learning model on Heroku which can predict the flair of a reddit post from subreddit r/India.
+The application can be found live at [Reddit Flair Detector](https://rindia-flair-detector.herokuapp.com/).
 
 ## Codebase
-The entire code has been developed using Python programming language, utilizing it's powerful text processing and machine learning modules. The application has been developed using Angular 8 for front_end and Flask for backend and hosted on Heroku web server.
+The entire code has been developed using Python programming language, utilizing it's powerful text processing and machine learning modules. The application has been developed using Angular 7 for frontend and Flask for backend and hosted on Heroku web server.
 
 ## Dependencies
 
-The following dependencies can be found in [requirements.txt](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/requirements.txt):
+The following dependencies can be found in [requirements.txt](https://github.com/harshit37/Reddit_Flair_Detector/tree/master/backend_flask/requirements.txt):
 
     praw
     scikit-learn
@@ -116,9 +117,22 @@ Also,since training samples were less for AMA,Food,[R]eddiquette thus model face
 
 Despite repeated occuring of name of other flairs like food in a post with actual flair let say Photography,Business/Finance etc it doesn't divert from the actual flair .
                 
-#### Building A web Application and deploying it on Heroku
+### 5.Building A web Application
 
+For front-end, Angular 7 is used.
+To setup the local dev environment refer to [README.md](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/frontend_angular/README.md)
 
+Run "npm install" to install all the modules listed as dependencies in package.json
+
+For Backend, Flask is used which is a micro web framework.
+For installing all the backend dependencies refer [here](https://github.com/harshit37/Reddit_Flair_Detector/tree/master/backend_flask/requirements.txt)
+
+@cross_origin() decorator is used to allow Cross-origin resource sharing (CORS) which is used in [main.py](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/backend_flask/app/main.py)
+
+### 6.Deploying on Heroku
+1) Go to Heroku.com and signup.
+2) Create an app by giving a unique app name.
+3) Refer deployement steps given [here](https://dashboard.heroku.com/apps/rindia-flair-detector/deploy/heroku-git)
 
  ## Build on Google Colab
 
@@ -127,5 +141,17 @@ All the .ipynb files can be found [here](https://github.com/harshit37/Reddit_Fla
 To get started, open the notebooks in playground mode and run the cells(You must be logged in with your google account and provide additional authorization). 
 
 ## Steps For Automated Testing
- 
+1) You need a file containing valid URL's from reddit india in each line. Refer to sample [file.txt](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/backend_flask/file.txt).
+2) Install python and run 2 lines of code as mentioned below.
+Automated Testing link is "https://flair-detection-backend.herokuapp.com/automated_testing" where you can post your request.
+----------------------------------------------------------------------------------------------------
+import requests
+files = {'upload_file': open('path to file.txt','rb')}
+r = requests.post("https://flair-detection-backend.herokuapp.com/automated_testing", files=files)
+print(r.text)
+----------------------------------------------------------------------------------------------------
+Response from the above API is (r) which will be in json format where keys will be the link to the post and values will be the predicted flair. r.text is used to display the json response.
+
+
+
 
