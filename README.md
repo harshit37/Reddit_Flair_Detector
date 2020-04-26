@@ -115,13 +115,17 @@ Also,since training samples were less for AMA,Food,[R]eddiquette thus model face
 ##### What is the model good at?
 
 Despite repeated occuring of name of other flairs like food in a post with actual flair let say Photography,Business/Finance etc it doesn't divert from the actual flair .
+                
+#### Building A web Application and deploying it on Heroku
 
- -                  
+
 
  ## Build on Google Colab
 
 Google Colab lets us build the project without installing it locally. Installation of some libraries may take some time depending on your internet connection.
 All the .ipynb files can be found [here](https://github.com/harshit37/Reddit_Flair_Detector).
 To get started, open the notebooks in playground mode and run the cells(You must be logged in with your google account and provide additional authorization). 
+
+## Steps For Automated Testing
  
 
