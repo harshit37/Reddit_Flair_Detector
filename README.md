@@ -155,7 +155,9 @@ print(r.text)
 Response from the above API is (r) which will be in json format where keys will be the link to the post and values will be the predicted flair. r.text is used to display the json response.
 
 ## References
-
+##### For Data Collection
+1) http://machineloveus.com/mining-reddit-data-or-links-to-33-python-cheat-sheets/
+2) http://www.storybench.org/how-to-scrape-reddit-with-python/
 
 ##### For deployment on heroku
 1)https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0
