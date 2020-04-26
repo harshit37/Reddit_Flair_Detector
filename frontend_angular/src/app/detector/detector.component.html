@@ -1,0 +1,32 @@
+<div class = "tool-bar">
+  <div style="display: inline;"><img src="assets/img/reddit_logo.png" width="50" height="50"></div>
+  <div style="display: inline;margin-left: 30%;font-size: 40px;">Reddit Flair Detector</div>
+</div>
+<br><br><br><br>
+
+<div class="form-area">
+    <div class = "list-header-title"><h2>Enter the Reddit India Post URL</h2></div>
+    <form [formGroup]="flairDetectorform" (ngSubmit)="flairDetectorform.valid && onSubmit()" class="form-inline form">
+         
+            <input type="text" 
+              matInput
+              class="form-control input" 
+              formControlName="inputURL" 
+              placeholder="Enter URL"/>
+          
+          <button type="submit" class="button-style">Submit</button><br>
+          <span *ngIf="flairDetectorform.get('inputURL').touched && flairDetectorform.get('inputURL').invalid">Please enter URL to proceed!</span>
+    </form>
+  
+</div>
+<br>
+<br>
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<h1 style="margin-left : 45%">{{resultValue}}</h1>
