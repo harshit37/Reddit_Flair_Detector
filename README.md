@@ -119,13 +119,12 @@ Despite repeated occuring of name of other flairs like food in a post with actua
                 
 ### 5.Building A web Application
 
-For front-end, Angular 7 is used.
-To setup the local dev environment refer to [README.md](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/frontend_angular/README.md)
-
+For frontend, Angular 7 is used. To setup the local dev environment refer to [README.md](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/frontend_angular/README.md)
 Run "npm install" to install all the modules listed as dependencies in package.json
+After installing the dependencies walkthrough the code given [here](https://github.com/harshit37/Reddit_Flair_Detector/tree/master/frontend_angular)
 
-For Backend, Flask is used which is a micro web framework.
-For installing all the backend dependencies refer [here](https://github.com/harshit37/Reddit_Flair_Detector/tree/master/backend_flask/requirements.txt)
+For Backend, Flask is used which is a micro web framework. For installing all the backend dependencies refer [here](https://github.com/harshit37/Reddit_Flair_Detector/tree/master/backend_flask/requirements.txt)
+After installing the dependencies walkthrough the code given [here](https://github.com/harshit37/Reddit_Flair_Detector/tree/master/backend_flask)
 
 @cross_origin() decorator is used to allow Cross-origin resource sharing (CORS) which is used in [main.py](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/backend_flask/app/main.py)
 
@@ -144,14 +143,23 @@ To get started, open the notebooks in playground mode and run the cells(You must
 1) You need a file containing valid URL's from reddit india in each line. Refer to sample [file.txt](https://github.com/harshit37/Reddit_Flair_Detector/blob/master/backend_flask/file.txt).
 2) Install python and run 2 lines of code as mentioned below.
 Automated Testing link is "https://flair-detection-backend.herokuapp.com/automated_testing" where you can post your request.
-----------------------------------------------------------------------------------------------------
+
 import requests
+
 files = {'upload_file': open('path to file.txt','rb')}
+
 r = requests.post("https://flair-detection-backend.herokuapp.com/automated_testing", files=files)
+
 print(r.text)
-----------------------------------------------------------------------------------------------------
+
 Response from the above API is (r) which will be in json format where keys will be the link to the post and values will be the predicted flair. r.text is used to display the json response.
 
+## References
 
 
+##### For deployment on heroku
+1)https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0
+
+##### To enable cors in flask
+2)https://stackoverflow.com/questions/25594893/how-to-enable-cors-in-flask
 
